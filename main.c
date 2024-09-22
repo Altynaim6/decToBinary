@@ -35,3 +35,9 @@ void toBinary(int decimalNo) {
         printf("%d", binary[i]);
     }
 }
+
+void ExtraOne(double decNum, int precision) {
+    printf("."); 
+
+    int extraBits = 0; 
+}
