@@ -46,4 +46,8 @@ void ExtraOne(double decNum, int precision) {
         int fractional_bit = (int)decNum;  
         printf("%d", fractional_bit);  
         decNum = decNum - fractional_bit;  
+
+        if (i == precision - 1 && fractional_bit == 1) {
+            extraBits = 1;  
+        }
 }
