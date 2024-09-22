@@ -50,4 +50,17 @@ void ExtraOne(double decNum, int precision) {
         if (i == precision - 1 && fractional_bit == 1) {
             extraBits = 1;  
         }
+
+    while (decNum > 0 && extraBits) {
+        decNum *= 2.0;
+        int fractional_bit = (int)decNum;
+        if (fractional_bit == 1) {
+            printf("%d", fractional_bit);  
+        }
+        decNum = decNum - fractional_bit;
+
+        if (fractional_bit == 0) {
+            extraBits = 0;  
+        }
+    }
 }
