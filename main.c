@@ -16,5 +16,9 @@ int main(void) {
     return 0;
 }
 
-
-
+void toBinary(int decimalNo) {
+    if (decimalNo == 0) {  
+        printf("0");
+        return;
+    }
+}
