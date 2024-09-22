@@ -40,4 +40,10 @@ void ExtraOne(double decNum, int precision) {
     printf("."); 
 
     int extraBits = 0; 
+
+    for (int i = 0; i < precision; ++i) {
+        decNum *= 2.0;  
+        int fractional_bit = (int)decNum;  
+        printf("%d", fractional_bit);  
+        decNum = decNum - fractional_bit;  
 }
