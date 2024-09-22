@@ -24,4 +24,10 @@ void toBinary(int decimalNo) {
 
     int binary[32];  
     int index = 0;
+
+    while (decimalNo > 0) {
+        binary[index] = decimalNo % 2; 
+        decimalNo = decimalNo / 2;  
+        index++;  
+    }
 }
