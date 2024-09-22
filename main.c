@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main(void) {
-    double num = 10.7643789;  
+    double num = 10.7643789;
     int intPart = (int)num;  
-    double fracPart = num - intPart;
+    double fracPart = num - intPart;  
 
     printf("Integer Part: ");
     toBinary(intPart);  
@@ -26,7 +26,7 @@ void toBinary(int decimalNo) {
     int index = 0;
 
     while (decimalNo > 0) {
-        binary[index] = decimalNo % 2; 
+        binary[index] = decimalNo % 2;  
         decimalNo = decimalNo / 2;  
         index++;  
     }
@@ -39,17 +39,18 @@ void toBinary(int decimalNo) {
 void ExtraOne(double decNum, int precision) {
     printf("."); 
 
-    int extraBits = 0; 
+    int extraBits = 0;  
 
     for (int i = 0; i < precision; ++i) {
         decNum *= 2.0;  
         int fractional_bit = (int)decNum;  
         printf("%d", fractional_bit);  
-        decNum = decNum - fractional_bit;  
+        decNum = decNum - fractional_bit; 
 
         if (i == precision - 1 && fractional_bit == 1) {
             extraBits = 1;  
         }
+    }
 
     while (decNum > 0 && extraBits) {
         decNum *= 2.0;
