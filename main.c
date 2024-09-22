@@ -30,4 +30,8 @@ void toBinary(int decimalNo) {
         decimalNo = decimalNo / 2;  
         index++;  
     }
+
+    for (int i = index - 1; i >= 0; i--) {
+        printf("%d", binary[i]);
+    }
 }
