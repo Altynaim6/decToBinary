@@ -21,4 +21,7 @@ void toBinary(int decimalNo) {
         printf("0");
         return;
     }
+
+    int binary[32];  
+    int index = 0;
 }
